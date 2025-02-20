@@ -1,0 +1,163 @@
+body {
+  transition: background-color 0.5s ease;
+  font-family: Arial, sans-serif;
+}
+p {
+  font-family: "Roboto", sans-serif; /* Применяем шрифт Roboto */
+}
+html {
+  scroll-behavior: smooth; /* Включает плавную прокрутку для якорей */
+}
+
+body.black {
+  background-color: rgb(27, 26, 26);
+  color: white;
+}
+
+body.white {
+  background-color: white;
+  color: rgb(34, 32, 32);
+}
+
+h1 {
+  text-align: center;
+}
+
+.links {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.link-button,
+.smooth-scroll {
+  display: inline-block;
+  padding: 12px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 25px;
+  background-color: #4caf50; /* Зеленый цвет */
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.link-button:hover {
+  background-color: #45a049; /* Более темный зеленый при наведении */
+  transform: translateY(-2px); /* Подъем кнопки при наведении */
+}
+
+button {
+  margin: 20px auto;
+  display: block;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background-color: #007bff; /* Синий цвет для кнопки смены темы */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Более темный синий при наведении */
+  transform: translateY(-2px); /* Подъем кнопки при наведении */
+}
+/* Основные стили */
+/* Основные стили */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa; /* Светлый фон */
+}
+
+/* Блок "Библиотека" */
+#library {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 30vh;
+  background-color: #f0f0f0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 2.5em;
+  text-align: center;
+}
+
+/* Кнопка "Вернуться наверх" */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.back-to-top:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Галерея изображений */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 фото в ряд по умолчанию */
+  gap: 15px; /* Расстояние между фото */
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Делаем фото квадратными везде */
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.05); /* Легкое увеличение при наведении */
+}
+
+/* Адаптация для планшетов (до 1024px) */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); /* 3 фото в ряд */
+  }
+}
+
+/* Адаптация для средних планшетов (до 768px) */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 фото в ряд */
+  }
+}
+
+/* Адаптация для телефонов (до 480px) */
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr); /* 2 фото в ряд */
+    gap: 8px; /* Уменьшаем отступы */
+  }
+}
+
+/* Для очень маленьких экранов (до 360px) */
+@media (max-width: 360px) {
+  .gallery {
+    grid-template-columns: repeat(1, 1fr); /* 1 фото в ряд */
+  }
+}
